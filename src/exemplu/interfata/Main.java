@@ -18,6 +18,10 @@ public class Main {
     public static void displayAllAnimalsSkill(Animal[] animals) {
         for(int i = 0; i<5; i++) {
             animals[i].displaySkill();
+            if(animals[i] instanceof CanFly){
+                String fly = ((CanFly) animals[i]).fly();
+                System.out.println(fly);
+            }
         }
     }
 }
